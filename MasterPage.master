@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+<head>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="/" />
+    <title></title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/whitmoyerstyles.css">
+    <script runat="server">
+        protected void Page_Load(object sender, EventArgs e){
+            lblServerDT.Text = DateTime.Now.ToString();
+        }
+    </script>
+</head>
+
+<body>
+	<header>
+		<div id="logo"><img src="/Images/BookLogo.png">BOOK REPOSITORY</div>
+		
+	</header>
+    
+	<section>
+
+		<nav>  
+			<ul>
+				<li><a href="/Default.aspx" style ="align-content:flex-start">Home</a>
+				
+			</ul>
+	    </nav>
+        <a style="margin-left:300px; align-content:center">Ricky Whitmoyer</a>
+        <nav>  
+			<ul>
+				<li><a href="/Default.aspx" style="margin-left:375px; align-content:flex-end">Home</a>
+				
+			</ul>
+	</nav>
+            
+         
+	</section>
+	<section id="pageContent">
+		<main role="main">
+			
+				
+            <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+            </asp:ContentPlaceHolder>
+			
+			
+		</main>
+		<aside>
+			<div>
+
+                <a href="https://www.abebooks.com/" target="_self">ABEBOOKS</a><br />
+                <a href="https://www.abaa.org/" target="_self">ABAA</a><br />
+                <a href="https://www.biblio.com/" target="_self">BIBLIO</a><br />
+                <a href="https://ilab.org/home" target="_self">ILAB</a><br />
+                <a href="https://blackwells.co.uk/bookshop/home" target="_self">BLACKWELL'S</a>
+                
+			</div>
+            
+			<div>
+
+                <a href="/Default.aspx">Home</a><br />
+                <a href="/Webpages/About/About.aspx">About</a><br />
+                <a href="/Webpages/Contact/Contact.aspx">Contact</a><br />
+                <a href="/Webpages/Login/Login.aspx">Login</a><br />
+                <a href="/Webpages/CustomerDisplay/CustomerDisplay.aspx">Customer Display</a>
+
+			</div>
+
+			<div>
+                <p>Date/Time:</p><br />
+                <p><asp:Label ID="lblServerDT" runat="server"></asp:Label></p>
+			</div>
+
+		</aside>
+	</section>
+	<footer>
+		
+	</footer>
+
+
+</body>
+
+</html>
+
